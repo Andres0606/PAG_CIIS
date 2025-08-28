@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="CONGRESO INTERNACIONAL DE INGENIERÍA SOSTENIBLE" content="En esta pagina encontraras al CIIS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>CIIS - CONGRESO INTERNACIONAL DE INGENIERÍA SOSTENIBLE (CIIS 2025)</title>
+    <link rel="stylesheet" href="../CSS/GUI.css">
+    <link rel="stylesheet" href="../CSS/Inscripcion.css">
+    <!-- Para iconos de redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<script src="../JS/menu.JS"> </script>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../Imagenes/UCC.png" alt="Logo UCC" class="logo">
+                </a>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <nav id="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="../index.html" class="nav-link">Sobre el Congreso</a>
+                        <div class="dropdown-content">
+                            <a href="convocatoria.html">Convocatoria</a>
+                            <a href="workshops.html">Workshops</a>
+                            <a href="programación.html">Actividades</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item"><a href="inscripcion.html" class="nav-link">Inscripción</a></li>
+                    <li class="nav-item"><a href="comites.html" class="nav-link">Comités</a></li>
+                    <li class="nav-item"><a href="patrocinadores.html" class="nav-link">Participantes</a></li>
+                    
+                    <li class="nav-item"><a href="galeria.html" class="nav-link">Galería</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <div class="countdown-container">
+        <h1 class="countdown-title">Esta sección será habilitada próximamente</h1>
+        <p class="countdown-subtitle">La información estará disponible a partir del:</p>
+        
+        <div class="target-date">
+            📅 31 de Agosto de 2025
+        </div>
+
+        <div class="countdown-display">
+            <div class="time-unit">
+                <span class="time-number" id="days">0</span>
+                <span class="time-label">Días</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-number" id="hours">0</span>
+                <span class="time-label">Horas</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-number" id="minutes">0</span>
+                <span class="time-label">Minutos</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-number" id="seconds">0</span>
+                <span class="time-label">Segundos</span>
+            </div>
+        </div>
+
+        <div class="congress-info">
+            <div class="congress-title">CIIS 2025</div>
+            <div class="congress-subtitle">Congreso Internacional de Ingeniería Sostenible</div>
+            <div class="coming-soon-badge">🚀 Próximamente</div>
+        </div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            // Fecha objetivo: 31 de agosto de 2025 a las 00:00:00
+            const targetDate = new Date('2025-08-31T00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                // Cálculos de tiempo
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                // Actualizar el DOM
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                // El tiempo ha llegado
+                document.querySelector('.countdown-title').textContent = '¡La sección ya está disponible!';
+                document.querySelector('.countdown-subtitle').textContent = 'Puedes acceder a toda la información ahora.';
+                
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+
+                document.querySelector('.coming-soon-badge').textContent = '✅ Disponible';
+                document.querySelector('.coming-soon-badge').style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+            }
+        }
+
+        // Actualizar inmediatamente y luego cada segundo
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Efecto de entrada suave
+        window.addEventListener('load', function() {
+            document.querySelector('.countdown-container').style.opacity = '0';
+            document.querySelector('.countdown-container').style.transform = 'translateY(20px)';
+            
+            setTimeout(function() {
+                document.querySelector('.countdown-container').style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                document.querySelector('.countdown-container').style.opacity = '1';
+                document.querySelector('.countdown-container').style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <li><a href="convocatoria.html"><i class="fas fa-envelope"></a></i> Email: info@congresociis.com</li>
+                    <li><a href="convocatoria.html"><i class="fas fa-phone"></a></i> Teléfono: +123 456 7890</li>
+                    <li><a href="https://www.google.com/maps/dir//Universidad+Cooperativa+de+Colombia,+Cra+22+No.+7+%E2%80%93+06+Sur,+La+Rosita,+Villavicencio,+Meta/@4.116019,-73.6282276,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e3e2e5f28aa3c41:0xc0e6ee115b961d89!2m2!1d-73.6091732!2d4.116019?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"><i class="fas fa-map-marker-alt"></i> Dirección: Universidad Cooperativa de Colombia, Villavicencio</a></li>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="/pagina-completa-html-css-master/SITIO/convocatoria.html"><i class="fas fa-file-alt"></i> Convocatoria</a></li>
+                        <li><a href="/pagina-completa-html-css-master/SITIO/programación.html"><i class="fas fa-calendar-alt"></i> Actividades</a></li>
+                        <li><a href="/pagina-completa-html-css-master/SITIO/galeria.html"><i class="fas fa-images"></i> Galería</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Derechos de Autor</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/sebastian-camilo-casta%C3%B1o-rojas-a45510381"></i> Sebastian Camilo Castaño Rojas</a></li>
+                        <li><a href="https://co.linkedin.com/in/luciana-sofia-guillot-forero-0a3547381"></i> Luciana Sofia Guillot Forero</a></li>
+                        <li><a href="https://www.linkedin.com/in/andres-suarez-6a7438381/overlay/contact-info/"></i> Andres Felipe Suarez Roa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/UCCVillavo/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ucc_villavicencio/?hl=es" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@UCCVillavo" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/universidad-cooperativa-de-colombia/posts/?feedView=all" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Congreso CIIS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

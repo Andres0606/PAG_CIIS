@@ -1,0 +1,344 @@
+/*IMAGEN PRINCIPAL.......*/
+
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Imagenes/fotoVillao.jpg');    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 150px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+#hero img{
+    width: 100%;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/*CIIS 2025.......*/
+
+
+.info-ciis {
+     margin-top: 0;
+}
+
+/* Contenedor que organiza el texto y la imagen lado a lado */
+.info-ciis-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;  /* 👈 este valor controla el espacio entre texto e imagen */
+}
+
+/* Estilos del contenedor de texto */
+.info-texto {
+    flex: 1 1 50%;
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;                /* Para centrar verticalmente */
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: justify;          /* <-- Justifica el texto */
+}
+
+
+/* Estilo del título */
+.info-texto h2 {
+    margin-bottom: 20px;             /* Espacio debajo del título */
+    color: #006633;                  /* Color verde institucional */
+    font-size: 2rem;                 /* Tamaño grande del título */
+    
+}
+
+/* Contenedor de la imagen */
+.info-imagen {
+    flex: 1 1 40%;                    /* Ocupa 40% del ancho disponible, también flexible */
+    text-align: center;              /* Centra la imagen dentro de su contenedor */
+}
+
+/* Imagen como tal */
+.info-imagen img {
+    max-width: 100%;                 /* La imagen no sobrepasa el ancho de su contenedor */
+    height: auto;                    /* Mantiene proporción de la imagen */
+    border-radius: 15px;             /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
+}
+
+/* Adaptación para pantallas pequeñas (móviles y tablets) */
+@media (max-width: 768px) {
+    .info-ciis-container {
+        flex-direction: column;      /* Apila los elementos verticalmente */
+        text-align: center;          /* Centra el texto en pantalla pequeña */
+        align-items: center;         /* Centra ambos elementos horizontalmente */
+    }
+
+    .info-texto, .info-imagen {
+        flex: 1 1 100%;              /* Ambos ocupan el 100% del ancho (una fila cada uno) */
+    }
+}
+
+
+
+
+
+
+/* Sección CIIS Villavicencio */
+.info-Villavo {
+    margin-top: 0;
+}
+
+/* Contenedor que organiza el texto y la imagen lado a lado */
+.info-ciis-container {
+    display: flex;                    /* Activa el modelo de caja flexible (Flexbox) */
+    flex-wrap: wrap;                 /* Permite que los elementos se acomoden en varias líneas si no caben */
+    align-items: center;             /* Alinea el contenido verticalmente al centro */
+    justify-content: space-between;  /* Deja espacio entre los elementos en horizontal */
+    gap: 40px;                        /* Espacio entre el texto y la imagen */
+}
+
+/* Estilos del contenedor de texto */
+.info-textoV {
+    flex: 1 1 50%;
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;                
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: justify;
+}
+
+/* Estilo del título */
+.info-textoV h2 {
+    margin-bottom: 20px;
+    color: #006633;       /* Verde institucional */
+    font-size: 2rem;
+}
+
+/* Contenedor de la imagen */
+.info-imagen {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+/* Imagen como tal */
+.info-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-ciis-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .info-textoV, .info-imagen {
+        flex: 1 1 100%;
+    }
+}
+
+.boton-directorio {
+    width: 30rem;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #2e8b57, #3cb371); /* Verde suave degradado */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+
+
+
+.LOGO-65AÑOS {
+    width: 100%;              /* Que ocupe todo el ancho de su contenedor */
+    display: flex;            /* Usamos flex para centrar el contenido */
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente si es necesario */
+    background-color: #fff;   /* Fondo blanco (opcional) */
+    overflow: hidden;         /* Oculta cualquier desbordamiento */
+    padding: 0;               /* Sin espacio interior */
+    margin: 0 auto;           /* Centrado horizontal */
+}
+
+.LOGO-65AÑOS img {
+    width: 100%;              /* Que se adapte al ancho del contenedor */
+    height: auto;             /* Mantener proporción original */
+    max-width: 100%;          /* No sobrepasar el ancho del contenedor */
+    display: block;           /* Quitar espacio adicional inferior */
+    object-fit: cover;        /* Ajusta el contenido, puede cambiar a contain si prefieres que no recorte nada */
+}
+
+
+.seccion-organizadores {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;/* Puedes reducir más si lo deseas */
+  background-color: #fff;
+}
+
+.contenido-organizadores {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.contenido-organizadores h2 {
+  font-size: 2em;
+  margin-bottom: 10px; /* 🔽 Reduce la separación inferior */
+}
+
+.organizador-figure {
+  margin: 0; /* 🔽 Elimina cualquier espacio extra */
+}
+
+.organizador-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-top: 0; /* 🔽 Asegura que no haya espacio arriba */
+}
+
+
+
+
+
+
+
+
+
+
+/*frase una mirada.......*/
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #202945;
+    text-align: center;
+}
+
+.info-button:hover {
+  background: #1d4b8c;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
+  margin: 15px 0; /* Espaciado vertical */
+  font-size: 2rem;
+  color: #2a5caa; /* Color azul para destacar */
+  
+}
+/*main*/
+
+
+
+/*footer*/
+.info-ciis, .info-Villavo {
+    padding: 30px;
+}
+
+/* Responsive Design */
+/* Ajustes generales para móviles */
+@media (max-width: 768px) {
+
+    /* Hero */
+    #hero {
+        padding: 60px 15px;
+        min-height: 40vh;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    /* Texto introductorio */
+    h3 {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+
+    /* Sección info-ciis y villavo */
+    .info-ciis-container, .info-Villavo .info-ciis-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .info-texto, .info-textoV {
+        font-size: 1rem;
+        text-align: left; /* mejor lectura en celular */
+    }
+
+    .info-texto h2, .info-textoV h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    /* Botón Villavicencio */
+    .boton-directorio {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    /* Imagenes */
+    .info-imagen img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Logo 65 años */
+    .LOGO-65AÑOS img {
+        max-width: 90%;
+    }
+
+    /* Organizadores */
+    .contenido-organizadores h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Tablets: entre 769px y 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #hero {
+        padding: 100px 20px;
+        min-height: 50vh;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .info-texto, .info-textoV {
+        font-size: 1.05rem;
+    }
+
+    .boton-directorio {
+        width: 80%;
+    }
+}
